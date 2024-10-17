@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contenedores Flexibles</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+header {
+    padding: 10px;
+    background-color: #f1f1f1; /* Color de fondo del header */
+    text-align: center; /* Centra el contenido del header */
+}
+
+.contenedor-padre {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los hijos se muevan a la siguiente línea si es necesario */
+    justify-content: center; /* Centra los hijos dentro del contenedor padre */
+    width: 100%; /* Asegúrate de que el contenedor padre ocupe el ancho completo */
+}
+
+.contenedor-hijo {
+    width: 500px;
+    height: 500px;
+    background-color: #3498db; /* Color de fondo para visualizar los contenedores */
+    margin: 10px; /* Espaciado entre los contenedores hijos */
+}
+
+.oculto {
+    display: none; /* Oculta el segundo contenedor por defecto */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <button id="toggleButton">Mostrar Segundo Contenedor</button>
+    </header>
+    <div class="contenedor-padre">
+        <div class="contenedor-hijo"></div>
+        <div class="contenedor-hijo oculto" id="segundoContenedor"></div>
+    </div>
+
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function() {
+    const segundoContenedor = document.getElementById('segundoContenedor');
+    if (segundoContenedor.style.display === 'none' || segundoContenedor.style.display === '') {
+        segundoContenedor.style.display = 'block'; // Muestra el segundo contenedor
+        this.textContent = 'Ocultar Segundo Contenedor'; // Cambia el texto del botón
+    } else {
+        segundoContenedor.style.display = 'none'; // Oculta el segundo contenedor
+        this.textContent = 'Mostrar Segundo Contenedor'; // Cambia el texto del botón
+    }
+});
+
+    </script>
+
+</body>
+</html>
