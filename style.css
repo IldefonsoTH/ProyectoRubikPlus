@@ -298,10 +298,11 @@ h1{
             padding: 15px;
             border-radius: 8px;
             z-index: 1000;
-            margin-right: 50px;
             display: none;
             max-width: 30%;
             border: 1px solid black;
+            min-width: 330px;
+            margin:auto;
         }
 
         .checkContainer.show {
@@ -591,6 +592,7 @@ a{
 
 .contenedor-padre {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .botonCerrar{
