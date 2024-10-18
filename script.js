@@ -61,11 +61,7 @@ function showStep() {
             if (currentStep == 2) {
                 const button = document.getElementById('toggleButton');
                 const contenedor = document.getElementById('checkContainer');
-                const buttonImage = document.getElementById('buttonImage');
                 contenedor.style.display = 'block'; // Muestra el contenedor
-                buttonImage.src = 'ASSETS/cerrar.png'; // Cambia a la imagen de "cerrar"
-                buttonImage.classList.remove('buttonImageClosed'); // Quita la clase con fondo
-                buttonImage.classList.add('buttonImageOpen'); // Agrega la clase sin fondo
                 
                 // Añade la clase de fondo blanco al contenedor de checklist
                 contenedor.classList.add('focused');
