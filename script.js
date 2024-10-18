@@ -20,7 +20,7 @@ function showStep() {
     const steps = [
         {
             elementId: 'contenedorLeyenda',
-            message: 'En primer lugar aqui encontramos todas las insignias y su significado',
+            message: 'En primer lugar aqui encontramos todas las insignias y su significado.',
         },
         {
             elementId: 'btnImage',
